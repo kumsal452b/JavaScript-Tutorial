@@ -13,7 +13,14 @@ console.log(calcAge1(1996));
 
 //This is arrow  funstion
 
-const value = diedDay => Number(getValue) - 1996;
+const value = diedDay => 1996 - diedDay;
 
 const test = value(2020)
 console.log(test)
+
+const ageOfRetirement = birthYeah => {
+    const age = 2020 - birthYeah;
+    const retirement = 65 - age;
+    return retirement;
+}
+console.log(ageOfRetirement(1996));
