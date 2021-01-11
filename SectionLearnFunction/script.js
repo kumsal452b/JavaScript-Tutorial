@@ -18,9 +18,9 @@ const value = diedDay => 1996 - diedDay;
 const test = value(2020)
 console.log(test)
 
-const ageOfRetirement = birthYeah => {
+const ageOfRetirement = (birthYeah, name) => {
     const age = 2020 - birthYeah;
     const retirement = 65 - age;
-    return retirement;
+    return "name is ${name} "; d
 }
-console.log(ageOfRetirement(1996));
+console.log(ageOfRetirement(1996, 'Yahya'));
