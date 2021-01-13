@@ -18,9 +18,19 @@ const value = diedDay => 1996 - diedDay;
 const test = value(2020)
 console.log(test)
 
-const ageOfRetirement = (birthYeah, name) => {
+const geOfRetirement = (birthYeah, name) => {
     const age = 2020 - birthYeah;
     const retirement = 65 - age;
-    return "name is ${name} "; d
+    return "name is ${name} ";
 }
 console.log(ageOfRetirement(1996, 'Yahya'));
+
+//This recursive function section
+const recursive = getNumber => {
+    if (Number(getNumber) <= 1) {
+        return 1;
+    }
+    var sonuc = 1;
+    return getNumber * (getNumber - 1);
+}
+
