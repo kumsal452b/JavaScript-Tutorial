@@ -31,6 +31,7 @@ const recursive = getNumber => {
         return 1;
     }
     var sonuc = 1;
-    return getNumber * (getNumber - 1);
+    return getNumber * recursive(getNumber - 1);
 }
 
+const result = recursive(3);
