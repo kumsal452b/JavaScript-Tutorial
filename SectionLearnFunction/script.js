@@ -45,8 +45,21 @@ console.log(year);
 
 let arraylist = new Array();
 
-for (var i = 0; i < 1000; i++) {
-    arraylist[i] = Math.floor(Math.random() * 1000);
-}
 
-console.log(arraylist);
+var name = "Yahya";
+var result1 = '';
+var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+var charactersLength = characters.length;
+var firstIndex = 0;
+var complete = ""
+for (var i = 0; i < 100; i++) {
+    result1 = characters.charAt(Math.floor(Math.random() * charactersLength));
+    if (name[firstIndex] == result1) {
+        complete += result1;
+        if (firstIndex == name.length) {
+            break
+        }
+        firstIndex++;
+    }
+}
+console.log("test" + complete);
