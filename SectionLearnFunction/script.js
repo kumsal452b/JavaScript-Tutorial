@@ -23,7 +23,6 @@ const geOfRetirement = (birthYeah, name) => {
     const retirement = 65 - age;
     return "name is ${name} ";
 }
-console.log(ageOfRetirement(1996, 'Yahya'));
 
 //This recursive function section
 const recursive = getNumber => {
@@ -38,3 +37,14 @@ const result = recursive(3);
 
 const calcAvg = (a, b, c) => (a + b + c) / 3;
 
+//Learn array element
+
+const year = new Array(12, 12, 12, 12);
+
+console.log(year);
+
+let arraylist = new Array();
+
+for (var i = 0; i < 1000; i++) {
+
+}
