@@ -35,3 +35,6 @@ const recursive = getNumber => {
 }
 
 const result = recursive(3);
+
+const calcAvg = (a, b, c) => (a + b + c) / 3;
+
