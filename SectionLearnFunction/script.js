@@ -46,5 +46,7 @@ console.log(year);
 let arraylist = new Array();
 
 for (var i = 0; i < 1000; i++) {
-
+    arraylist[i] = Math.floor(Math.random() * 1000);
 }
+
+console.log(arraylist);
