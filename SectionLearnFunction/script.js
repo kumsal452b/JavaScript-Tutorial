@@ -68,13 +68,25 @@ const calcTip = function (bill = Array()) {
     var result = Array();
     bill.forEach(Element => {
         if (Element >= 50 && Element <= 300) {
-            result.push(0.15);
+            result.push(0.15 * Element);
         } else {
-            result.push(0.2);
+            result.push(0.2 * Element);
         }
     })
     return result;
 }
-const bills = [123, 123, 242];
+const bills = [1, 123, 123, 242, 30, 400];
 console.log(calcTip(bills));
+
+//Create an object
+
+const information = {
+    name: "Yahya",
+    surname: "Alatas",
+    age: "23",
+    friends: ['Kumsal', 'Ayhan', 'ilyas']
+}
+
+console.log(information.age);
+const
 
