@@ -64,8 +64,17 @@ let arraylist = new Array();
 // }
 // console.log("test" + complete);
 
-const calcTip = function (bill) {
-
-    return bill >= 50 && bill <= 300 ? bill = 0.15 : bill = 0.2;
+const calcTip = function (bill = Array()) {
+    var result = Array();
+    bill.forEach(Element => {
+        if (Element >= 50 && Element <= 300) {
+            result.push(0.15);
+        } else {
+            result.push(0.2);
+        }
+    })
+    return result;
 }
+const bills = [123, 123, 242];
+console.log(calcTip(bills));
 
