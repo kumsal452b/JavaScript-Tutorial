@@ -116,8 +116,23 @@ const yaho = {
 console.log(yaho.authLicence());
 
 const calcBMI = (weigth, height) => {
-    var resultTest = (weigth / Math.sqrt((height / 100)));
+    var test = height / 100;
+    var sqrt = Math.pow(test, 2);
+    var resultTest = (weigth / sqrt);
+
     return resultTest;
 }
-console.log(calcBMI(50, 170));
+const denem = {
+    test111: function () {
+        this.s = "";
+    }
+}
+
+var kumsal = calcBMI(100, 170);
+var yahya = calcBMI(50, 170);
+var result = '${y}'
+var test1 = kumsal > yahya ? 'Kumsal' : 'Yahya';
+var test2 = kumsal < yahya ? 'Kumsal' : 'Yahya'
+console.log(',grea then ');
+console.log('${}')
 
