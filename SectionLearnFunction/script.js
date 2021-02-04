@@ -127,12 +127,15 @@ const denem = {
         this.s = "";
     }
 }
-
+var deneme = 'onu ddd'
+const ses = 12;
+console.log(`${deneme} `)
 var kumsal = calcBMI(100, 170);
 var yahya = calcBMI(50, 170);
 var result = '${y}'
 var test1 = kumsal > yahya ? 'Kumsal' : 'Yahya';
 var test2 = kumsal < yahya ? 'Kumsal' : 'Yahya'
 console.log(',grea then ');
-console.log('${}')
+console.log(')
+
 
