@@ -9,3 +9,7 @@ h1 {
 .first {
   background-color: aqua;
 }
+#your-name {
+  background-color: rgba(8, 27, 25, 0.822);
+  border: 10px solid rgb(rgb(104, 116, 102), rgb(58, 124, 58), blue);
+}
