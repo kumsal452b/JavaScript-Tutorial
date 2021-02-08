@@ -1,15 +1,38 @@
+* {
+  margin: o;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
   background-color: rgb(103, 117, 103);
   font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;
+  padding: 50px;
 }
 h1 {
   font-size: 40px;
+  margin-bottom: 25px;
+}
+h2 {
+  margin-bottom: 80px;
+  text-align: center;
 }
 .first {
   background-color: aqua;
 }
 #your-name {
   background-color: rgba(8, 27, 25, 0.822);
-  border: 10px solid rgb(rgb(104, 116, 102), rgb(58, 124, 58), blue);
+  border: 5px solid rgb(55, 212, 24);
+}
+input,
+button {
+  padding: 10dp;
+  tab-size: 26px;
+  background-color: blue;
+}
+#your-name h2 {
+  color: olivedrab;
+}
+#your-image {
+  width: 300px;
 }
