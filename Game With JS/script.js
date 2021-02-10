@@ -6,6 +6,7 @@ var highScore = document.querySelector('.highscore');
 var checkButton = document.querySelector('.check');
 var numberCenter = document.querySelector('.guess');
 var number = document.querySelector('.number');
+var backgroundElement = document.querySelector('body');
 let thescore = 20;
 checkButton.addEventListener('click', function () {
   var currentNumber = Number(numberCenter.value);
@@ -16,6 +17,7 @@ checkButton.addEventListener('click', function () {
   if (currentNumber == generateNumber) {
     message.textContent = '😂 Correct number';
     number.textContent = generateNumber;
+    backgroundElement.style.backgroundColor = 'rgb(3, 58, 71)';
   } else if (currentNumber < generateNumber) {
     message.textContent = 'Too low';
     thescore--;
@@ -37,6 +39,7 @@ var checkFuntion = function () {
   if (currentNumber == generateNumber) {
     message.textContent = '😂 Correct number';
     number.textContent = generateNumber;
+    checkButton.disbaled = false;
   } else if (currentNumber < generateNumber) {
     message.textContent = 'Too low';
   } else if (currentNumber > generateNumber) {
