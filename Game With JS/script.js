@@ -4,10 +4,12 @@ var message = document.querySelector('.message');
 var score = document.querySelector('.score');
 var highScore = document.querySelector('.highscore');
 var checkButton = document.querySelector('.check');
+var againButton = document.querySelector('.again');
 var numberCenter = document.querySelector('.guess');
 var number = document.querySelector('.number');
 var backgroundElement = document.querySelector('body');
 let thescore = 20;
+highScore.textContent = '0';
 checkButton.addEventListener('click', function () {
   var currentNumber = Number(numberCenter.value);
   if (currentNumber == 0) {
@@ -18,6 +20,10 @@ checkButton.addEventListener('click', function () {
     message.textContent = '😂 Correct number';
     number.textContent = generateNumber;
     backgroundElement.style.backgroundColor = 'rgb(3, 58, 71)';
+    var highNumber = Number(highScore.textContent);
+    if (highNumber < thescore) {
+      highScore.textContent = thescore;
+    }
   } else if (currentNumber < generateNumber) {
     message.textContent = 'Too low';
     thescore--;
@@ -30,19 +36,10 @@ checkButton.addEventListener('click', function () {
 });
 
 var generateNumber = Math.floor(Math.random() * 20 + 1);
-
-var checkFuntion = function () {
-  var currentNumber = Number(numberCenter.Value);
-  if (currentNumber == null) {
-    message.textContent = 'No number';
-  }
-  if (currentNumber == generateNumber) {
-    message.textContent = '😂 Correct number';
-    number.textContent = generateNumber;
-    checkButton.disbaled = false;
-  } else if (currentNumber < generateNumber) {
-    message.textContent = 'Too low';
-  } else if (currentNumber > generateNumber) {
-    message.textContent = 'Too high';
-  }
-};
+againButton.addEventListener('click', function () {
+  numberCenter.value = null;
+  number.textContent = '?';
+  score.textContent = '20';
+  backgroundElement.style.backgroundColor = '#222';
+  thescore = 20;
+});
