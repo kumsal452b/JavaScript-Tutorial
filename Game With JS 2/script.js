@@ -5,5 +5,11 @@ const dice = document.querySelector('.dice');
 const btnNew = document.querySelector('.btn--new');
 const btnRoll = document.querySelector('.btn--roll');
 const btnHold = document.querySelector('.btn--hold');
+
 score1.textContent = 0;
 score2.textContent = 0;
+
+btnRoll.addEventListener('click', function () {
+  const dice = Math.floor(Math.random() * 6 + 1);
+  console.log(dice);
+});
