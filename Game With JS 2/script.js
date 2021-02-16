@@ -12,17 +12,5 @@ score2.textContent = 0;
 btnRoll.addEventListener('click', function () {
   const diceN = Math.floor(Math.random() * 6 + 1);
   dice.classList.remove('hidden');
-  if (diceN === 1) {
-    dice.src = 'dice-1.png';
-  } else if (diceN === 2) {
-    dice.src = 'dice-2.png';
-  } else if (diceN === 3) {
-    dice.src = 'dice-3.png';
-  } else if (diceN === 4) {
-    dice.src = 'dice-4.png';
-  } else if (diceN === 5) {
-    dice.src = 'dice-5.png';
-  } else if (diceN === 6) {
-    dice.src = 'dice-6.png';
-  }
+  dice.src = `dice-${diceN}.png`;
 });
