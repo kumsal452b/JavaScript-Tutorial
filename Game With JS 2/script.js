@@ -8,9 +8,13 @@ const btnHold = document.querySelector('.btn--hold');
 
 score1.textContent = 0;
 score2.textContent = 0;
-
+let currentScor = 0;
 btnRoll.addEventListener('click', function () {
   const diceN = Math.floor(Math.random() * 6 + 1);
   dice.classList.remove('hidden');
-  dice.src = `dice-${diceN}.png`;
+  if (diceN != 1) {
+    dice.src = `dice-${diceN}.png`;
+    currentScor += diceN;
+  } else {
+  }
 });
