@@ -25,22 +25,10 @@ btnRoll.addEventListener('click', function () {
       `current--${activePlayer}`
     ).textContent = currentScor;
   } else {
-    document.getElementById(`current--${activePlayer}`).textContent = 0;
-    currentScor = 0;
-    document
-      .querySelector(`.player--${activePlayer}`)
-      .classList.remove('player--active');
-    activePlayer ? (activePlayer = 0) : (activePlayer = 1);
-    document
-      .querySelector(`.player--${activePlayer}`)
-      .classList.add('player--active');
+    swichPlayer();
   }
 });
-
-btnHold.addEventListener('click', function () {
-  scorList[activePlayer] += currentScor;
-  document.querySelector(`#score--${activePlayer}`).textContent =
-    scorList[activePlayer];
+const swichPlayer = function () {
   currentScor = 0;
   document.getElementById(`current--${activePlayer}`).textContent = 0;
   document
@@ -50,4 +38,19 @@ btnHold.addEventListener('click', function () {
   document
     .querySelector(`.player--${activePlayer}`)
     .classList.add('player--active');
+};
+btnHold.addEventListener('click', function () {
+  scorList[activePlayer] += currentScor;
+  document.querySelector(`#score--${activePlayer}`).textContent =
+    scorList[activePlayer];
+  if (scorList[activePlayer] >= 25) {
+    document
+      .querySelector(`.player--${activePlayer}`)
+      .classList.add('player--winner');
+    document
+      .querySelector(`.player--${activePlayer}`)
+      .classList.add('player--active');
+    return;
+  }
+  swichPlayer();
 });
