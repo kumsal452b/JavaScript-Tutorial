@@ -38,4 +38,4 @@ btnRoll.addEventListener('click', function () {
   }
 });
 
-btnRoll;
+btnRoll.addEventListener('click', function () {});
