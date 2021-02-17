@@ -25,7 +25,8 @@ btnRoll.addEventListener('click', function () {
       `current--${activePlayer}`
     ).textContent = currentScor;
   } else {
-    scorList[activePlayer] = currentScor;
+    document.getElementById(`current--${activePlayer}`).textContent = 0;
+    // scorList[activePlayer] = currentScor;
     document
       .querySelector(`.player--${activePlayer}`)
       .classList.remove('player--active');
@@ -33,6 +34,8 @@ btnRoll.addEventListener('click', function () {
     document
       .querySelector(`.player--${activePlayer}`)
       .classList.add('player--active');
-    currentScor = scorList[activePlayer];
+    // currentScor = scorList[activePlayer];
   }
 });
+
+btnRoll;
