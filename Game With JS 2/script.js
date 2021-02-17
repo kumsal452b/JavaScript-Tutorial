@@ -26,7 +26,7 @@ btnRoll.addEventListener('click', function () {
     ).textContent = currentScor;
   } else {
     document.getElementById(`current--${activePlayer}`).textContent = 0;
-    // scorList[activePlayer] = currentScor;
+    currentScor = 0;
     document
       .querySelector(`.player--${activePlayer}`)
       .classList.remove('player--active');
@@ -34,8 +34,20 @@ btnRoll.addEventListener('click', function () {
     document
       .querySelector(`.player--${activePlayer}`)
       .classList.add('player--active');
-    // currentScor = scorList[activePlayer];
   }
 });
 
-btnRoll.addEventListener('click', function () {});
+btnHold.addEventListener('click', function () {
+  scorList[activePlayer] += currentScor;
+  document.querySelector(`#score--${activePlayer}`).textContent =
+    scorList[activePlayer];
+  currentScor = 0;
+  document.getElementById(`current--${activePlayer}`).textContent = 0;
+  document
+    .querySelector(`.player--${activePlayer}`)
+    .classList.remove('player--active');
+  activePlayer ? (activePlayer = 0) : (activePlayer = 1);
+  document
+    .querySelector(`.player--${activePlayer}`)
+    .classList.add('player--active');
+});
