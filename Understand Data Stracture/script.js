@@ -27,3 +27,6 @@ const restaurant = {
     },
   },
 };
+
+const { resturantNama: Rname, location: loc } = restaurant;
+console.log(Rname, loc);
