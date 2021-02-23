@@ -30,3 +30,13 @@ const restaurant = {
 
 const { resturantNama: Rname, location: loc } = restaurant;
 console.log(Rname, loc);
+
+var arr = [1, 2, 3, 4];
+var arr2 = [5, 6, ...arr];
+console.log(arr2);
+
+var sum = function (...numbers) {
+  console.log(numbers);
+};
+
+sum(1, 1, 2, 3);
