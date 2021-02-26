@@ -39,4 +39,9 @@ var sum = function (...numbers) {
   console.log(numbers);
 };
 
+console.log('true' || 3);
+
 sum(1, 1, 2, 3);
+
+const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+for (const item of menu) console.log(item);
