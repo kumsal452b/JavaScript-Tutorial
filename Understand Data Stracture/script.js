@@ -53,3 +53,7 @@ for (const day of property) {
   console.log(day);
 }
 console.log(property);
+
+const value = Object.values(openingHours);
+
+console.log(value);
