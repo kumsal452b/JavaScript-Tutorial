@@ -110,6 +110,13 @@ for (const [i, player] of game.scored.entries()) {
 
 let avarage = 0;
 console.log('In here');
-console.log(game.odds.entries);
-for (const odd of game.odds.entries) {
+console.log('');
+for (const odd of Object.values(game.odds)) {
+  avarage += odd;
+}
+avarage /= Object.values(game.odds).length;
+console.log(avarage);
+
+for (const odd of Object.entries(game.odds)) {
+  console.log(odd);
 }
