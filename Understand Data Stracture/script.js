@@ -107,3 +107,9 @@ const game = {
 for (const [i, player] of game.scored.entries()) {
   console.log(`Goal ${i + 1} : ${player}`);
 }
+
+let avarage = 0;
+console.log('In here');
+console.log(game.odds.entries);
+for (const odd of game.odds.entries) {
+}
