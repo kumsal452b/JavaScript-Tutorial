@@ -121,3 +121,7 @@ for (const [team, odd] of Object.entries(game.odds)) {
   const theTeam = team === 'x' ? 'draw' : `victory ${game[team]}`;
   console.log(`Odd of ${theTeam} ${odd}`);
 }
+
+//Set
+const orderSet = new Set(['Yahya', 'Kumsal', 'Yahya', 'Sevda']);
+console.log(orderSet);
