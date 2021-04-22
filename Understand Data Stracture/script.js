@@ -125,3 +125,22 @@ for (const [team, odd] of Object.entries(game.odds)) {
 //Set
 const orderSet = new Set(['Yahya', 'Kumsal', 'Yahya', 'Sevda']);
 console.log(orderSet);
+
+const anserMap = new Map([
+  ['questio', 'What is the bes programing language?'],
+  [1, 'C'],
+  [2, 'Java'],
+  [3, 'JavaScript'],
+  ['correct', 3],
+  [true, 'Correct '],
+  [false, 'Try again'],
+]);
+console.log('test');
+for (const [key, value] of anserMap) {
+  if (typeof key === 'number') console.log(`Anser ${key}:${value}`);
+}
+var request = window.prompt('Please select correct option');
+const suggesion = parseInt(request);
+if (typeof suggesion == 'number') {
+  console.log(anserMap.get(suggesion === anserMap.get('correct')));
+}
