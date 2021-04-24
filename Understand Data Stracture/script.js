@@ -136,11 +136,32 @@ const anserMap = new Map([
   [false, 'Try again'],
 ]);
 console.log('test');
-for (const [key, value] of anserMap) {
-  if (typeof key === 'number') console.log(`Anser ${key}:${value}`);
-}
-var request = window.prompt('Please select correct option');
-const suggesion = parseInt(request);
-if (typeof suggesion == 'number') {
-  console.log(anserMap.get(suggesion === anserMap.get('correct')));
-}
+// for (const [key, value] of anserMap) {
+//   if (typeof key === 'number') console.log(`Anser ${key}:${value}`);
+// }
+// var request = window.prompt('Please select correct option');
+// const suggesion = parseInt(request);
+// if (typeof suggesion == 'number') {
+//   console.log(anserMap.get(suggesion === anserMap.get('correct')));
+// }
+
+const gameEvents = new Map([
+  [17, '⚽️ GOAL'],
+  [36, '🔁 Substitution'],
+  [47, '⚽️ GOAL'],
+  [61, '🔁 Substitution'],
+  [64, '🔶 Yellow card'],
+  [69, '🔴 Red card'],
+  [70, '🔁 Substitution'],
+  [72, '🔁 Substitution'],
+  [76, '⚽️ GOAL'],
+  [80, '⚽️ GOAL'],
+  [92, '🔶 Yellow card'],
+]);
+
+const events = [...new Set(gameEvents.values())];
+console.log(events);
+gameEvents.delete(64);
+
+const time = [...gameEvents.keys()];
+console.log(time);
