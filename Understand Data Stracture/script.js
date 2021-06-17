@@ -165,3 +165,38 @@ gameEvents.delete(64);
 
 const time = [...gameEvents.keys()];
 console.log(time);
+const email = 'yahya@alatas.com';
+
+const emailLowerCase = email.toLowerCase();
+const test = emailLowerCase.split(1, emailLowerCase.indexOf('@'));
+console.log('test' + emailLowerCase.slice(1));
+const emailToWant =
+  emailLowerCase[0].toUpperCase() +
+  emailLowerCase.slice(1, emailLowerCase.indexOf('@') + 1) +
+  emailLowerCase.slice(emailLowerCase.indexOf('@'))[1].toUpperCase() +
+  emailLowerCase.slice(emailLowerCase.indexOf('@') + 2);
+console.log(emailToWant);
+var myList = [
+  ['Yahya', 'Alatas'],
+  ['Kumsal', 'Alatas'],
+];
+console.log(myList);
+
+var person = {
+  firstName: 'John',
+  lastName: 'Doe',
+  age: 50,
+  eyeColor: 'blue',
+};
+var person2 = {
+  firstName: 'Yahya',
+  lastName: 'Doe',
+  age: 50,
+  eyeColor: 'blue',
+};
+var allPerson = [person, person2];
+console.log(allPerson);
+console.log(allPerson[1].firstName);
+for (person of allPerson) {
+  console.log(person.firstName);
+}

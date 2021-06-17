@@ -1,4 +1,4 @@
-'use sctrict';
+"use sctrict";
 // function logger() {
 //     console.log("test")
 // }
@@ -45,7 +45,6 @@
 
 // let arraylist = new Array();
 
-
 // // var name = "Yahya";
 // // var result1 = '';
 // // var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
@@ -64,78 +63,81 @@
 // // }
 // // console.log("test" + complete);
 
-// const calcTip = function (bill = Array()) {
-//     var result = Array();
-//     bill.forEach(Element => {
-//         if (Element >= 50 && Element <= 300) {
-//             result.push(0.15 * Element);
-//         } else {
-//             result.push(0.2 * Element);
-//         }
-//     })
-//     return result;
-// }
-// const bills = [1, 123, 123, 242, 30, 400];
-// console.log(calcTip(bills));
+const calcTip = function (bill = Array()) {
+  var result = Array();
+  bill.forEach((Element) => {
+    if (Element >= 50 && Element <= 300) {
+      result.push(0.15 * Element);
+    } else {
+      result.push(0.2 * Element);
+    }
+  });
+  return result;
+};
+const bills = [1, 123, 123, 242, 30, 400];
+console.log(calcTip(bills));
 
-// //Create an object
+//Create an object
 
-// const information = {
-//     name: "Yahya",
-//     surname: "Alatas",
-//     age: "23",
-//     friends: ['Kumsal', 'Ayhan', 'ilyas']
-// }
+const information = {
+  name: "Yahya",
+  surname: "Alatas",
+  age: "23",
+  friends: ["Kumsal", "Ayhan", "ilyas"],
+};
 
-// console.log(information.age);
-// const jonas = {
-//     name: "Yahya",
-//     surname: "Alatas",
-//     age: "23",
-//     friends: ['Kumsal', 'Ayhan', 'ilyas'],
-//     bestFriend: this.friends[0]
-// }
-// console.log(jonas.bestFriend);
+console.log(information.age);
+const jonas = {
+  name: "Yahya",
+  surname: "Alatas",
+  age: "23",
+  friends: ["Kumsal", "Ayhan", "ilyas"],
+  bestFriend: this.friends[0],
+};
+console.log(jonas.bestFriend);
 
 const yaho = {
-    name: "jonas",
-    surname: "alatas",
-    driverLicence: false,
-    age: 17,
-    authLicence: function () {
-        var theAge = 2021 - this.age;
-        if (theAge >= 18) {
-            this.driverLicence = true;
-        }
-        else {
-            this.driverLicence = false;
-        }
-        return this.driverLicence;
+  name: "jonas",
+  surname: "alatas",
+  driverLicence: false,
+  age: 17,
+  authLicence: function () {
+    var theAge = 2021 - this.age;
+    if (theAge >= 18) {
+      this.driverLicence = true;
+    } else {
+      this.driverLicence = false;
     }
-}
+    return this.driverLicence;
+  },
+};
 console.log(yaho.authLicence());
 
 const calcBMI = (weigth, height) => {
-    var test = height / 100;
-    var sqrt = Math.pow(test, 2);
-    var resultTest = (weigth / sqrt);
+  var test = height / 100;
+  var sqrt = Math.pow(test, 2);
+  var resultTest = weigth / sqrt;
 
-    return resultTest;
-}
+  return resultTest;
+};
 const denem = {
-    test111: function () {
-        this.s = "";
-    }
-}
-var deneme = 'onu ddd'
+  test111: function () {
+    this.s = "";
+  },
+};
+var deneme = "onu ddd";
 const ses = 12;
-console.log(`${deneme} `)
+console.log(`${deneme} `);
 var kumsal = calcBMI(100, 170);
 var yahya = calcBMI(50, 170);
-var result = '${y}'
-var test1 = kumsal > yahya ? 'Kumsal' : 'Yahya';
-var test2 = kumsal < yahya ? 'Kumsal' : 'Yahya'
-console.log(',grea then ');
-console.log(')
+var result = "${y}";
+var test1 = kumsal > yahya ? "Kumsal" : "Yahya";
+var test2 = kumsal < yahya ? "Kumsal" : "Yahya";
+console.log(",grea then ");
 
-
+var myList = [
+  ["Yahya", "Alatas"],
+  ["Alatas", "Kumsal"],
+  ["Aktas", "Ilyas"],
+];
+console.log(myList);
